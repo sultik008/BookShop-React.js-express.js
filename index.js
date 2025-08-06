@@ -9,12 +9,12 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.json());
 app.use('/api' , router);
+app.use(express.static(path.join(__dirname, "build")));
 
-app.get("*", (req, res) => {
+app.get('/{*any}', (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
