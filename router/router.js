@@ -3,6 +3,6 @@ import { Router } from "express";
 
 const router = Router()
 
-router.get('/' , getBooks)
+router.get('/api/' , getBooks)
 
 export default router
