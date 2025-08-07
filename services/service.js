@@ -1,6 +1,6 @@
-import { en, Faker, ru, fr } from "@faker-js/faker";
+import { en, Faker, ru, pl } from "@faker-js/faker";
 
-const locales = [en, ru, fr];
+const locales = [en, ru, pl];
 
 export async function generateBooks({
   seed,
